@@ -6,13 +6,41 @@ tsc --init
 tsc (manual compile)
 tsc --watch (auto compile)
 
-in tsconfig.json
+-- in tsconfig.json --
 "target"
 "rootDir"
 "outDir"
 */
-let id = 5;
-// id = 'Ryan' (will throw out type error)
-console.log('ID:', id);
+// -- Basic (Primitive) Types --
+let id = 88; // id = 'Ryan' (will throw out type error)
 let person = 'ryan';
-console.log(person);
+let isCool = true;
+// console.log('ID:', id, 'Person:', person, 'Is cool?', isCool);
+// -- Any Type --
+let test = 'what?';
+test = 'nope';
+// console.log('TEST IS:', test);
+// -- Arrays --
+let odds = [1, 3, 5, 7, 9, 11];
+let anyArr = [5, 'Colorado', true];
+// odds.push('Hades');
+// let odds: Number[] = [1,3,5,7,9,11, false];
+// -- Tuple --
+let tupleArr = [59, false, 'Buffalo Bills'];
+// Can specify the exact types in each index position in the array.
+// let tupleArrBad: [number, boolean, string] = [true, 25, 'Kansas City Chiefs'];
+// -- Tuple Array --
+let employees;
+employees = [
+    [1, 'Cynthia'],
+    [2, 'Dale Cooper'],
+    [3, 'Donald Draper'],
+];
+// console.log(employees)
+// -- Unions --
+// If you want a particular variable to hold more than one type.
+let myID = 22;
+myID = 'RLZF56';
+myID = 35921;
+// -- Enum --
+// Allow us to define a set of named constants.
